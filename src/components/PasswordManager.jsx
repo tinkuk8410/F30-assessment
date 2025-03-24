@@ -37,6 +37,7 @@ function PasswordManager() {
                 style={{
                     backgroundImage: 'url(/lockbg.jpg)',
                     backgroundSize: 'cover',
+                    borderRadius:'10px',
                     padding:'50px',
                     display: 'flex',
                     flexDirection: 'column',
@@ -53,8 +54,13 @@ function PasswordManager() {
                         border: '1px solid #ddd',
                         borderRadius: '4px',
                         width: '50%',
-                        boxSizing: 'border-box'
+                        boxSizing: 'border-box',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'flex-end' // Aligns button to the right
+                       
                     }}>
+                        <h4 style={{ alignSelf: 'flex-start' }}>Add New Password</h4>
                 <input
                     placeholder="Website"
                     value={website}
@@ -101,10 +107,12 @@ function PasswordManager() {
                         padding: '8px',
                         background: '#007bff',
                         color: 'white',
+                       
+                        justifyContent: 'end',
                         border: 'none',
                         borderRadius: '4px',
                         cursor: 'pointer',
-                        width: '100%',
+                        width: '20%',
                         boxSizing: 'border-box'
                     }}
                     onMouseOver={e => e.target.style.background = '#0056b3'}
