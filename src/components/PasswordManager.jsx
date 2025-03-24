@@ -41,17 +41,26 @@ function PasswordManager() {
                     display: 'flex',
                     flexDirection: 'column',
                     gap: '10px',
-                    marginBottom: '20px',
-                    
+                    marginBottom: '20px',                    
                     marginLeft: '40px',
                     marginRight: '40px'
                 }}  
-            >
+            >   
+            <div style={{
+                        
+                        padding: '20px',
+                        backgroundColor:'lightblue',
+                        border: '1px solid #ddd',
+                        borderRadius: '4px',
+                        width: '50%',
+                        boxSizing: 'border-box'
+                    }}>
                 <input
                     placeholder="Website"
                     value={website}
                     onChange={(e) => setWebsite(e.target.value)}
                     style={{
+                        marginBottom: '10px',
                         padding: '8px',
                         border: '1px solid #ddd',
                         borderRadius: '4px',
@@ -64,6 +73,7 @@ function PasswordManager() {
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                     style={{
+                        marginBottom: '10px',
                         padding: '8px',
                         border: '1px solid #ddd',
                         borderRadius: '4px',
@@ -77,6 +87,7 @@ function PasswordManager() {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     style={{
+                        marginBottom: '10px',
                         padding: '8px',
                         border: '1px solid #ddd',
                         borderRadius: '4px',
@@ -101,6 +112,7 @@ function PasswordManager() {
                 >
                     Add
                 </button>
+                </div>
             </form>
             
             </div>
@@ -110,12 +122,11 @@ function PasswordManager() {
                 padding: '15px',
                 borderRadius: '4px',
                 
-                height: '50vh',
-                width: '100%',
+                height: '40vh',
+                
                 boxSizing: 'border-box',
-                maxWidth: '800px', // Optional: keeps content readable
-                marginLeft: 'auto',
-                marginRight: 'auto'
+                marginLeft: '40px',
+                marginRight: '40px'
             }}>
                 <div style={{
                     display: 'flex',
@@ -133,7 +144,7 @@ function PasswordManager() {
                             checked={showPasswords}
                             onChange={() => setShowPasswords(!showPasswords)}
                         />
-                        Show
+                        Show Passwords
                     </label>
                 </div>
 
@@ -195,7 +206,7 @@ function PasswordManager() {
                                     onMouseOver={e => e.target.style.background = '#b02a37'}
                                     onMouseOut={e => e.target.style.background = '#dc3545'}
                                 >
-                                    ×
+                                    x
                                 </button>
                             </li>
                         ))}

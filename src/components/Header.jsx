@@ -7,6 +7,7 @@ function Header() {
             background: '#f8f9fa',
             borderBottom: '1px solid #eee',
             width: '100%',
+            height:'10vh',
             boxSizing: 'border-box'
         }}>
             <h1 style={{
